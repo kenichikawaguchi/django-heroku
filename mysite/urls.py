@@ -22,9 +22,3 @@ urlpatterns = [
     path('static/admin', admin.site.urls),
     path('static/admin/css', admin.site.urls),
 ]
-
-from django-nlp import settings
-
-urlpatterns += patterns('',
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
